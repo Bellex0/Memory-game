@@ -17,6 +17,7 @@ cardArr.sort(() => 0.5 - Math.random())
 
 const grid = document.querySelector('.grid')
 const showResults = document.querySelector('#result')
+const playAgain = document.querySelector('#playButton')
 var chosenCards = []
 var chosenCardsId = []
 var cardsWon = []
@@ -52,6 +53,7 @@ function match() {
         gif.id = "gif"
         gif.setAttribute('src', 'pics/catninja.gif')
         grid.parentNode.replaceChild(gif, grid)
+        gameOver()
     }
 }
 
@@ -65,7 +67,22 @@ function flipCard() {
     }
 }
 
+function gameOver() {
+    // if (showResults.textContent = ' 💯 Well done, you captured all the fruits. Smoothie Time! 🍹'){
+        let button = document.createElement('button')
+        button.textContent = "Play Again 🔪🍉"
+        button.addEventListener('click', () => {
+            window.setTimeout(() => {
+                window.location.reload(true)
+            }, 200)
+        })
+        playAgain.appendChild(button)
+    }
+// }
+
+
 gameBoard()
+
 
 
 

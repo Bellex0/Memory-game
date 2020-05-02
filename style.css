@@ -35,3 +35,22 @@ img {
     margin-left: 30% !important;
 }
 
+#playButton {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Shojumaru', cursive;
+    font-size: 24px;
+    margin-left: 40%;   
+    border-color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6888ED;
+}
+
+
