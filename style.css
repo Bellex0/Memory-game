@@ -1,6 +1,37 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    height: 1000px;
-    width: 1000px
+    height: 450px;
+    width: 600px;
+    margin-left: 30%;
+    margin-top: 40px
 }
+
+#title {
+    font-family: 'Shojumaru', cursive;
+    text-align: center;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: 'Shojumaru', cursive;
+    text-align: center;
+    font-size: 36px;
+}
+
+#result {
+    font-family: EuphemiaUCAS;
+    font-size: 36px;
+}
+
+img {
+    width: 150px !important;
+    height: 150px !important
+}
+
+#gif {
+    height: 450px !important; 
+    width: 600px !important;
+    margin-left: 30% !important;
+}
+

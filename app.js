@@ -19,8 +19,9 @@ const grid = document.querySelector('.grid')
 const showResults = document.querySelector('#result')
 var chosenCards = []
 var chosenCardsId = []
+var cardsWon = []
 
-const gameBoard = () => {
+function gameBoard() {
     for(let i=0; i < cardArr.length; i++){
         const card = document.createElement('img')
         card.setAttribute('src', 'pics/front.png')
@@ -30,7 +31,7 @@ const gameBoard = () => {
     }
 }
 
-const match = () => {
+function match() {
     const cards = document.querySelectorAll('img')
     const card1Id = chosenCardsId[0]
     const card2Id = chosenCardsId[1]
@@ -46,11 +47,15 @@ const match = () => {
     chosenCardsId = []
     showResults.textContent = cardsWon.length
     if (cardsWon.length === cardArr.length/2){
-        showResults.textContent = '💯 Yay! You win!'
+        showResults.textContent = ' 💯 Well done, you captured all the fruits. Smoothie Time! 🍹'
+        const gif = document.createElement('img')
+        gif.id = "gif"
+        gif.setAttribute('src', 'pics/catninja.gif')
+        grid.parentNode.replaceChild(gif, grid)
     }
 }
 
-const flipCard = () => {
+function flipCard() {
     const cardId = this.getAttribute('data-id')
     chosenCards.push(cardArr[cardId].name)
     chosenCardsId.push(cardId)
@@ -59,6 +64,13 @@ const flipCard = () => {
         setTimeout(match, 500)
     }
 }
+
+gameBoard()
+
+
+
+
+
 
 
 
